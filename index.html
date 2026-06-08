@@ -36,6 +36,28 @@ body{
     width:100%;
     height:auto;
 }
+
+/* WhatsApp Share Button */
+.share-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    text-decoration:none;
+    padding:14px 20px;
+    border-radius:50px;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+    font-weight:bold;
+    box-shadow:0 4px 12px rgba(0,0,0,0.3);
+    z-index:1000;
+    transition:background 0.2s ease;
+}
+
+.share-btn:hover{
+    background:#1ebe5d;
+}
 </style>
 </head>
 
@@ -44,9 +66,17 @@ body{
 <div class="menu-container">
     <img
         src="YUMMY.png"
-        alt="Yummy Treats Menu"
+        alt="Menu"
         class="menu-image">
 </div>
+
+<a
+    href="https://wa.me/?text=Check%20out%20the%20Yummy%20Treats%20menu:%20https://rf1sys.github.io/menudemo/"
+    class="share-btn"
+    target="_blank"
+    rel="noopener noreferrer">
+    Share on WhatsApp
+</a>
 
 </body>
 </html>
