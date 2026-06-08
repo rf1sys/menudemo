@@ -52,11 +52,21 @@ body{
     font-weight:bold;
     box-shadow:0 4px 12px rgba(0,0,0,0.3);
     z-index:1000;
-    transition:background 0.2s ease;
+    transition:all 0.2s ease;
 }
 
 .share-btn:hover{
     background:#1ebe5d;
+    transform:translateY(-2px);
+}
+
+@media (max-width:480px){
+    .share-btn{
+        bottom:15px;
+        right:15px;
+        padding:12px 16px;
+        font-size:13px;
+    }
 }
 </style>
 </head>
@@ -66,17 +76,27 @@ body{
 <div class="menu-container">
     <img
         src="YUMMY.png"
-        alt="Menu"
+        alt="Yummy Treats Menu"
         class="menu-image">
 </div>
 
-<a
-    href="https://wa.me/?text=Check%20out%20the%20Yummy%20Treats%20menu:%20https://rf1sys.github.io/menudemo/"
-    class="share-btn"
-    target="_blank"
-    rel="noopener noreferrer">
+<a href="#" class="share-btn" id="whatsappShare">
     Share on WhatsApp
 </a>
+
+<script>
+document.getElementById('whatsappShare').addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const menuUrl = "https://rf1sys.github.io/menudemo/";
+    const message = "Check out our menu: " + menuUrl;
+
+    window.open(
+        "https://wa.me/?text=" + encodeURIComponent(message),
+        "_blank"
+    );
+});
+</script>
 
 </body>
 </html>
